@@ -13,7 +13,7 @@ namespace ReadCSV
         {
             try
             {
-                using (var reader = new StreamReader(@"C:\Users\Asus\CurrencyRate.csv"))
+                using (var reader = new StreamReader(@"C:\Users\Asus\Desktop\CurrencyRate.csv"))
                 {
                     Console.Write("Write down the country: ");
                     var userInput = Console.ReadLine();

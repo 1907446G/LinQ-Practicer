@@ -21,7 +21,7 @@ namespace NTUPractice
                 #region Lazy Loading
                 context.Configuration.LazyLoadingEnabled = false;
                 #endregion
-                using (var reader = new StreamReader(@"C:\Users\Asus\CurrencyRate.csv"))
+                using (var reader = new StreamReader(@"C:\Users\Asus\Desktop\CurrencyRate.csv"))
                 {
                     List<CurrencyRate> currencyRates = new List<CurrencyRate>();
                     #region CSV reader and casting into a class
@@ -106,7 +106,7 @@ namespace NTUPractice
                                  select new { FirstName = e.Person.FirstName, LastName = e.Person.LastName, Email = e.EmailAddress1 };*/
                     #endregion
                     #region JSON Out
-                    var people = context.People;
+                    /*var people = context.People;
                     Console.Write("Enter first name: ");
                     var firstName = Console.ReadLine();
                     var JsonQuery = from e in people
@@ -118,9 +118,19 @@ namespace NTUPractice
                     var x = ser.Serialize(JsonQuery);
 
 
-                    Console.WriteLine(x);
+                    Console.WriteLine(x);*/
                     #endregion
 
+                    #region CSV to JSON then to Text file
+                    var csv = new List<string[]>();
+                    var data = System.IO.File.ReadAllLines(@"C:\Users\Asus\Desktop\CurrencyRate.csv");
+                    foreach (var item in data)
+                    {
+                        csv.Add(item.Split('\t'));
+                    }
+                    var json = new JavaScriptSerializer().Serialize(csv);
+                    File.WriteAllText(@"C:\Users\Asus\Desktop\CurrencyRate.txt", json);
+                    #endregion
                 }
 
 
