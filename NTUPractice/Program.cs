@@ -24,7 +24,7 @@ namespace NTUPractice
                 using (var reader = new StreamReader(@"C:\Users\Asus\CurrencyRate.csv"))
                 {
                     List<CurrencyRate> currencyRates = new List<CurrencyRate>();
-
+                    #region CSV reader and casting into a class
                     while (!reader.EndOfStream)
                     {
                         CurrencyRate currency = new CurrencyRate();
@@ -41,9 +41,9 @@ namespace NTUPractice
 
                         currencyRates.Add(currency);
                     }
+                    #endregion
 
-
-                    //Prints SourceCountry, Des, and Conv rate (2.5)
+                    #region Prints SourceCountry, Des, and Conv rate
 
                     /*
                     var query = from x in currencyRates
@@ -67,30 +67,33 @@ namespace NTUPractice
                         Console.WriteLine(item);
                     }
                     */
+                    #endregion
 
-                /*Group by Dest Country
+                    #region Group by Dest Country
 
-                        var groupByDest = from x in currencyRates
-                                          group x by x.ToCurrencyCode;
+                    /* var groupByDest = from x in currencyRates
+                                              group x by x.ToCurrencyCode;
 
-                    foreach (var exchange in groupByDest)
-                    {
-                        Console.WriteLine(exchange.Key);
+                        foreach (var exchange in groupByDest)
+                        {
+                            Console.WriteLine(exchange.Key);
 
-                        var average = exchange.Average(p => p.AverageRate);
-                        var min = exchange.Min(p => p.AverageRate);
-                        var max = exchange.Max(p => p.AverageRate);
-                        Console.WriteLine($"Average: {average} Min: {min} Max: {max}");
+                            var average = exchange.Average(p => p.AverageRate);
+                            var min = exchange.Min(p => p.AverageRate);
+                            var max = exchange.Max(p => p.AverageRate);
+                            Console.WriteLine($"Average: {average} Min: {min} Max: {max}");
+                        }
+
+                        Console.ReadKey();
                     }
 
-                    Console.ReadKey();
-                }
+                    var input = Console.ReadLine();
+                    */
+                    #endregion
 
-                var input = Console.ReadLine();
-                */
-
-                //Db Pull: 
-                    var people = context.People;
+                    //Db Pull: 
+                    
+                    #region Email filtering
                     var emails = context.EmailAddresses;
 
                     /*var query = from p in people
@@ -101,9 +104,13 @@ namespace NTUPractice
                                  where e.Person.FirstName.Contains(input)
                                  orderby e.Person.FirstName
                                  select new { FirstName = e.Person.FirstName, LastName = e.Person.LastName, Email = e.EmailAddress1 };*/
-
+                    #endregion
+                    #region JSON Out
+                    var people = context.People;
+                    Console.Write("Enter first name: ");
+                    var firstName = Console.ReadLine();
                     var JsonQuery = from e in people
-                                    where e.FirstName.Contains("Jordan")
+                                    where e.FirstName.Contains(firstName)
                                     select e.PersonCreditCards;
 
 
@@ -112,7 +119,7 @@ namespace NTUPractice
 
 
                     Console.WriteLine(x);
-
+                    #endregion
 
                 }
 
