@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
-using System.Xml;
 
 namespace NTUPractice
 {
@@ -128,8 +127,10 @@ namespace NTUPractice
                     {
                         csv.Add(item.Split('\t'));
                     }
-                    var json = new JavaScriptSerializer().Serialize(csv);
-                    File.WriteAllText(@"C:\Users\Asus\Desktop\CurrencyRate.txt", json);
+                    var json = JsonConvert.SerializeObject(csv, Formatting.Indented);
+                    var json1 = JsonConvert.SerializeObject(csv, Formatting.None);
+                    File.WriteAllText(@"C:\Users\Asus\Desktop\CurrencyRateIndented.txt", json);
+                    File.WriteAllText(@"C:\Users\Asus\Desktop\CurrencyRateNone.txt", json1);
                     #endregion
                 }
 
