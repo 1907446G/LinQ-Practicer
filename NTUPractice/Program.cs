@@ -15,7 +15,7 @@ namespace NTUPractice
 
         static void Main(string[] args)
         {
-
+            //Adding a comment
             using (var context = new AdventureWorks2017Entities1())
             {
                 using (var reader = new StreamReader(@"C:\Users\Asus\CurrencyRate.csv"))
