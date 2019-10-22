@@ -20,6 +20,7 @@ namespace NTUPractice
         public AdventureWorks2017Entities1()
             : base("name=AdventureWorks2017Entities1")
         {
+            this.Configuration.ProxyCreationEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

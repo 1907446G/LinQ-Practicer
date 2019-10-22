@@ -18,6 +18,9 @@ namespace NTUPractice
             //Adding a comment
             using (var context = new AdventureWorks2017Entities1())
             {
+                #region Lazy Loading
+                context.Configuration.LazyLoadingEnabled = false;
+                #endregion
                 using (var reader = new StreamReader(@"C:\Users\Asus\CurrencyRate.csv"))
                 {
                     List<CurrencyRate> currencyRates = new List<CurrencyRate>();
