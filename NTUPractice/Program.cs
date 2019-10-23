@@ -127,8 +127,8 @@ namespace NTUPractice
                     {
                         csv.Add(item.Split('\t'));
                     }
-                    var json = JsonConvert.SerializeObject(csv, Formatting.Indented);
-                    var json1 = JsonConvert.SerializeObject(csv, Formatting.None);
+                    var json = JsonConvert.SerializeObject(currencyRates, Formatting.Indented);
+                    var json1 = JsonConvert.SerializeObject(currencyRates, Formatting.None);
                     File.WriteAllText(@"C:\Users\Asus\Desktop\CurrencyRateIndented.txt", json);
                     File.WriteAllText(@"C:\Users\Asus\Desktop\CurrencyRateNone.txt", json1);
                     #endregion
