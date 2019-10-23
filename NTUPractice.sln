@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTUPractice", "NTUPractice\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadCSV", "ReadCSV\ReadCSV.csproj", "{3FC4A9C8-0568-4F28-A2F4-5EA001045AE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remake", "Remake\Remake.csproj", "{F79E13D6-647F-43E7-AAEA-1FACE98668B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3FC4A9C8-0568-4F28-A2F4-5EA001045AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FC4A9C8-0568-4F28-A2F4-5EA001045AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FC4A9C8-0568-4F28-A2F4-5EA001045AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F79E13D6-647F-43E7-AAEA-1FACE98668B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F79E13D6-647F-43E7-AAEA-1FACE98668B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F79E13D6-647F-43E7-AAEA-1FACE98668B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F79E13D6-647F-43E7-AAEA-1FACE98668B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
