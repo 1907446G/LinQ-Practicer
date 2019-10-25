@@ -30,13 +30,15 @@ namespace QueryForms
             using (var context = new AdventureWorks2017Entities())
             {
                 
-                var filter = context.People;
+                var filter = context.EmailAddresses;
                 var query = (from x in filter
-                             where x.FirstName.Contains(QueryBox.Text)
+                             where x.Person.FirstName.Contains(QueryBox.Text)
                              select x);
                 foreach (var item in query)
                 {
-                    var row = new string[] { item.FirstName, item.LastName };
+                    var name = $"{item.Person.FirstName} {item.Person.MiddleName} {item.Person.LastName}";
+                    var email = item.EmailAddress1;
+                    var row = new string[] { name, email };
                     dataTable.Rows.Add(row);
                 }
             }
@@ -49,8 +51,8 @@ namespace QueryForms
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dataTable.Columns.Add("First Name");
-            dataTable.Columns.Add("Second Name");
+            dataTable.Columns.Add("Name");
+            dataTable.Columns.Add("Email");
 
             dataGridView1.DataSource = dataTable;
         }
