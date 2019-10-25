@@ -16,6 +16,7 @@ namespace QueryForms
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void QueryBox_TextChanged(object sender, EventArgs e)
@@ -25,8 +26,10 @@ namespace QueryForms
 
         private void QueryBtn_Click(object sender, EventArgs e)
         {
+            dataTable.Clear();
             using (var context = new AdventureWorks2017Entities())
             {
+                
                 var filter = context.People;
                 var query = (from x in filter
                              where x.FirstName.Contains(QueryBox.Text)
@@ -50,6 +53,20 @@ namespace QueryForms
             dataTable.Columns.Add("Second Name");
 
             dataGridView1.DataSource = dataTable;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (dataGridView1.SelectedRows != null)
+            {
+                label1.Text = $"Selected Name: {dataGridView1.Rows[e.RowIndex].Cells[0].Value}";
+            }
         }
     }
 }
