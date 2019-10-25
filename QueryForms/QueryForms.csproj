@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CEFFCD1E-428D-41B1-BECC-5BA259A59DDB}</ProjectGuid>
+    <ProjectGuid>{12EA9C97-3132-49D3-9E05-A50584A2F30A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>QueryForms</RootNamespace>
     <AssemblyName>QueryForms</AssemblyName>
@@ -60,11 +60,6 @@
     </Compile>
     <Compile Include="AddressType.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdventureWorks2017DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2017DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="AWBuildVersion.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -393,17 +388,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="AdventureWorks2017DataSet.xsc">
-      <DependentUpon>AdventureWorks2017DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AdventureWorks2017DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AdventureWorks2017DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AdventureWorks2017DataSet.xss">
-      <DependentUpon>AdventureWorks2017DataSet.xsd</DependentUpon>
-    </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>

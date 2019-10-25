@@ -12,6 +12,7 @@ namespace QueryForms
 {
     public partial class Form1 : Form
     {
+        DataTable dataTable = new DataTable();
         public Form1()
         {
             InitializeComponent();
@@ -22,9 +23,9 @@ namespace QueryForms
 
         }
 
-        private void searchBtn_Click(object sender, EventArgs e)
+        private void QueryBtn_Click(object sender, EventArgs e)
         {
-            using(var context = new AdventureWorks2017Entities())
+            using (var context = new AdventureWorks2017Entities())
             {
                 var filter = context.People;
                 var query = (from x in filter
@@ -32,15 +33,23 @@ namespace QueryForms
                              select x);
                 foreach (var item in query)
                 {
-                    var rows = new string[] { item.FirstName, item.LastName };
-                    dataGridView1.Rows.Add(rows);
+                    var row = new string[] { item.FirstName, item.LastName };
+                    dataTable.Rows.Add(row);
                 }
             }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            dataTable.Columns.Add("First Name");
+            dataTable.Columns.Add("Second Name");
+
+            dataGridView1.DataSource = dataTable;
         }
     }
 }
