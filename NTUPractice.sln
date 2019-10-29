@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTUWinForms", "NTUWinForms\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginPage", "LoginPage\LoginPage.csproj", "{0102B7C8-332C-4982-9A5C-8FDE9461EAEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResource", "HumanResource\HumanResource.csproj", "{7EB5FC8F-E150-4361-A674-F8E85E329423}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{0102B7C8-332C-4982-9A5C-8FDE9461EAEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0102B7C8-332C-4982-9A5C-8FDE9461EAEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0102B7C8-332C-4982-9A5C-8FDE9461EAEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EB5FC8F-E150-4361-A674-F8E85E329423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EB5FC8F-E150-4361-A674-F8E85E329423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EB5FC8F-E150-4361-A674-F8E85E329423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EB5FC8F-E150-4361-A674-F8E85E329423}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -29,11 +29,11 @@ namespace LoginPage
 
         private void okBtn_Click(object sender, EventArgs e)
         {
-            using(var context = new AdventureWorks2017Entities())
+            using (var context = new AdventureWorks2017Entities())
             {
                 var checkLogin = context.Employees;
                 var x = (from y in checkLogin
-                         where y.LoginID.Equals(usernameField.Text) 
+                         where y.LoginID.Equals(usernameField.Text)
                          select y);
 
                 if (usernameField.Text.Equals("") || passwordField.Text.Equals(""))
@@ -47,24 +47,38 @@ namespace LoginPage
                         , MessageBoxIcon.Error);
                 }
                 else
-                { 
+                {
                     foreach (var username in x)
                     {
+                        #region User's account validation
                         if (passwordField.Text.Equals(username.BirthDate.ToString("yyyyMMdd")))
                         {
-                            MessageBox.Show("Login successful", "Welcome", MessageBoxButtons.OKCancel
-                        , MessageBoxIcon.Information);
+                            MessageBox.Show("Login successful", "Welcome", MessageBoxButtons.OKCancel,
+                                MessageBoxIcon.Information);
+                            var department = (from y in context.vEmployeeDepartments
+                                              where username.BusinessEntityID == y.BusinessEntityID
+                                              select y.Department);
+                            #region Manager check
+                            if (username.OrganizationLevel <= 2)
+                            {
+                                MessageBox.Show($"You have a Manager's access priviledge. " +
+                                    $"Welcome {username.Person.FirstName} {username.Person.MiddleName} {username.Person.LastName} from {department.First()}",
+                                    "Manager Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show($"Welcome {username.Person.FirstName} {username.Person.MiddleName} {username.Person.LastName} from {department.First()}",
+                                    "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            #endregion
+                            
                         }
                         else
                         {
                             MessageBox.Show("Password incorrect", "Error", MessageBoxButtons.OKCancel
                         , MessageBoxIcon.Error);
                         }
-                        if ((username.JobTitle.Contains("Manager")) || (username.JobTitle.Contains("President"))
-                            || (username.JobTitle.Contains("Supervisor")) || (username.JobTitle.Contains("Officer"))){
-                            MessageBox.Show("You have a Manager's access priviledge."
-                                ,"Manager Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        #endregion
                     }
                 }
             }
@@ -72,7 +86,7 @@ namespace LoginPage
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
     }
 }
