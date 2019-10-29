@@ -76,6 +76,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AdventureWorks2017.edmx</DependentUpon>
     </Compile>
+    <Compile Include="AdventureWorks2017DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureWorks2017DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AWBuildVersion.cs">
       <DependentUpon>AdventureWorks2017.tt</DependentUpon>
     </Compile>
@@ -136,11 +141,17 @@
     <Compile Include="ErrorLog.cs">
       <DependentUpon>AdventureWorks2017.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="HRManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="HRManager.Designer.cs">
+      <DependentUpon>HRManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Illustration.cs">
       <DependentUpon>AdventureWorks2017.tt</DependentUpon>
@@ -372,8 +383,11 @@
     <Compile Include="WorkOrderRouting.cs">
       <DependentUpon>AdventureWorks2017.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="HRManager.resx">
+      <DependentUpon>HRManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -390,6 +404,17 @@
     </EntityDeploy>
     <None Include="AdventureWorks2017.edmx.diagram">
       <DependentUpon>AdventureWorks2017.edmx</DependentUpon>
+    </None>
+    <None Include="AdventureWorks2017DataSet.xsc">
+      <DependentUpon>AdventureWorks2017DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AdventureWorks2017DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AdventureWorks2017DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AdventureWorks2017DataSet.xss">
+      <DependentUpon>AdventureWorks2017DataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

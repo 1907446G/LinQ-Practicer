@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LoginPage
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -59,11 +59,15 @@ namespace LoginPage
                                               where username.BusinessEntityID == y.BusinessEntityID
                                               select y.Department);
                             #region Manager check
-                            if (username.OrganizationLevel <= 2)
+                            if (username.OrganizationLevel <= 2 || username.OrganizationLevel == null)
                             {
                                 MessageBox.Show($"You have a Manager's access priviledge. " +
                                     $"Welcome {username.Person.FirstName} {username.Person.MiddleName} {username.Person.LastName} from {department.First()}",
                                     "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Hide();
+                                HRManager hR = new HRManager(username);
+                                hR.ShowDialog();
+                                this.Close();
                             }
                             else
                             {
@@ -87,6 +91,11 @@ namespace LoginPage
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
