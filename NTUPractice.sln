@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinQRecap", "LinQRecap\LinQ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryForms", "QueryForms\QueryForms.csproj", "{12EA9C97-3132-49D3-9E05-A50584A2F30A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTUWinForms", "NTUWinForms\NTUWinForms.csproj", "{C65DF650-AE6A-4B76-BED0-B995A11989D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginPage", "LoginPage\LoginPage.csproj", "{0102B7C8-332C-4982-9A5C-8FDE9461EAEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{12EA9C97-3132-49D3-9E05-A50584A2F30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12EA9C97-3132-49D3-9E05-A50584A2F30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12EA9C97-3132-49D3-9E05-A50584A2F30A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C65DF650-AE6A-4B76-BED0-B995A11989D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C65DF650-AE6A-4B76-BED0-B995A11989D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C65DF650-AE6A-4B76-BED0-B995A11989D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C65DF650-AE6A-4B76-BED0-B995A11989D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0102B7C8-332C-4982-9A5C-8FDE9461EAEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0102B7C8-332C-4982-9A5C-8FDE9461EAEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0102B7C8-332C-4982-9A5C-8FDE9461EAEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0102B7C8-332C-4982-9A5C-8FDE9461EAEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
