@@ -47,7 +47,7 @@ namespace LoginPage
                         , MessageBoxIcon.Error);
                 }
                 else
-                {
+                { 
                     foreach (var username in x)
                     {
                         if (passwordField.Text.Equals(username.BirthDate.ToString("yyyyMMdd")))
@@ -59,6 +59,11 @@ namespace LoginPage
                         {
                             MessageBox.Show("Password incorrect", "Error", MessageBoxButtons.OKCancel
                         , MessageBoxIcon.Error);
+                        }
+                        if ((username.JobTitle.Contains("Manager")) || (username.JobTitle.Contains("President"))
+                            || (username.JobTitle.Contains("Supervisor")) || (username.JobTitle.Contains("Officer"))){
+                            MessageBox.Show("You have a Manager's access priviledge."
+                                ,"Manager Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
