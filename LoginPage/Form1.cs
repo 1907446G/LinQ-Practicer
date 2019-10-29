@@ -63,7 +63,7 @@ namespace LoginPage
                             {
                                 MessageBox.Show($"You have a Manager's access priviledge. " +
                                     $"Welcome {username.Person.FirstName} {username.Person.MiddleName} {username.Person.LastName} from {department.First()}",
-                                    "Manager Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {
