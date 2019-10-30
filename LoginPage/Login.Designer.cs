@@ -35,11 +35,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.usernameField = new System.Windows.Forms.TextBox();
+            this.generateMg = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.generateMg);
             this.groupBox1.Controls.Add(this.cancelBtn);
             this.groupBox1.Controls.Add(this.okBtn);
             this.groupBox1.Controls.Add(this.passwordField);
@@ -49,14 +51,15 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(638, 402);
+            this.groupBox1.Size = new System.Drawing.Size(638, 224);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sign in to EM management";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(288, 189);
+            this.cancelBtn.Location = new System.Drawing.Point(330, 122);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(75, 23);
             this.cancelBtn.TabIndex = 6;
@@ -66,7 +69,7 @@
             // 
             // okBtn
             // 
-            this.okBtn.Location = new System.Drawing.Point(207, 189);
+            this.okBtn.Location = new System.Drawing.Point(249, 122);
             this.okBtn.Name = "okBtn";
             this.okBtn.Size = new System.Drawing.Size(75, 23);
             this.okBtn.TabIndex = 1;
@@ -76,7 +79,7 @@
             // 
             // passwordField
             // 
-            this.passwordField.Location = new System.Drawing.Point(93, 96);
+            this.passwordField.Location = new System.Drawing.Point(135, 94);
             this.passwordField.Name = "passwordField";
             this.passwordField.PasswordChar = '*';
             this.passwordField.Size = new System.Drawing.Size(270, 22);
@@ -86,7 +89,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 99);
+            this.label2.Location = new System.Drawing.Point(52, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 17);
             this.label2.TabIndex = 4;
@@ -95,7 +98,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 54);
+            this.label1.Location = new System.Drawing.Point(48, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 17);
             this.label1.TabIndex = 3;
@@ -103,17 +106,27 @@
             // 
             // usernameField
             // 
-            this.usernameField.Location = new System.Drawing.Point(93, 51);
+            this.usernameField.Location = new System.Drawing.Point(135, 51);
             this.usernameField.Name = "usernameField";
             this.usernameField.Size = new System.Drawing.Size(270, 22);
             this.usernameField.TabIndex = 2;
             this.usernameField.TextChanged += new System.EventHandler(this.usernameField_TextChanged);
             // 
+            // generateMg
+            // 
+            this.generateMg.Location = new System.Drawing.Point(12, 122);
+            this.generateMg.Name = "generateMg";
+            this.generateMg.Size = new System.Drawing.Size(201, 23);
+            this.generateMg.TabIndex = 7;
+            this.generateMg.Text = "Generate Account";
+            this.generateMg.UseVisualStyleBackColor = true;
+            this.generateMg.Click += new System.EventHandler(this.generateMg_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(638, 402);
+            this.ClientSize = new System.Drawing.Size(638, 224);
             this.Controls.Add(this.groupBox1);
             this.Name = "Login";
             this.Text = "Login";
@@ -133,6 +146,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox usernameField;
+        private System.Windows.Forms.Button generateMg;
     }
 }
 

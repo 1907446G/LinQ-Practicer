@@ -97,5 +97,16 @@ namespace LoginPage
         {
 
         }
+
+        private void generateMg_Click(object sender, EventArgs e)
+        {
+            usernameField.Text = @"adventure-works\terri0";
+            passwordField.Text = "19710801";
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
