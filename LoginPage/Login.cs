@@ -71,7 +71,7 @@ namespace LoginPage
                                 this.Close();
                             }
 
-                            else if ((context.uspGetManagerEmployees(username.BusinessEntityID)).Count() == 0 && (department.First().Contains("Human Resources")))
+                            else if ((context.uspGetManagerEmployees(username.BusinessEntityID)).Count() == 1 && (department.First().Contains("Human Resources")))
                             {
                                 MessageBox.Show($"Welcome back HR. " +
                                     $"Welcome {username.Person.FirstName} {username.Person.MiddleName} {username.Person.LastName} from {department.First()}",
@@ -83,7 +83,7 @@ namespace LoginPage
                                 
                             }
 
-                            else
+                            else if ((context.uspGetManagerEmployees(username.BusinessEntityID)).Count() > 1 && (!department.First().Contains("Human Resources")))
                             {
                                 MessageBox.Show($"Welcome {username.Person.FirstName} {username.Person.MiddleName} {username.Person.LastName} from {department.First()}",
                                     "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
