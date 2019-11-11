@@ -150,6 +150,12 @@
     <Compile Include="HRManager.Designer.cs">
       <DependentUpon>HRManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="HRStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRStaff.Designer.cs">
+      <DependentUpon>HRStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -388,6 +394,9 @@
     </Compile>
     <EmbeddedResource Include="HRManager.resx">
       <DependentUpon>HRManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRStaff.resx">
+      <DependentUpon>HRStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

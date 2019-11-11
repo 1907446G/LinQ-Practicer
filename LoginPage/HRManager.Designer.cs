@@ -31,17 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.employeeList = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateProvinceNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.adventureWorks2017DataSet = new LoginPage.AdventureWorks2017DataSet();
             this.vEmployeeTableAdapter = new LoginPage.AdventureWorks2017DataSetTableAdapters.vEmployeeTableAdapter();
+            this.manageStaffBtn = new System.Windows.Forms.Button();
+            this.addStaffBtn = new System.Windows.Forms.Button();
+            this.exitedStaffBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vEmployeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adventureWorks2017DataSet)).BeginInit();
@@ -49,8 +44,10 @@
             // 
             // employeeList
             // 
+            this.employeeList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.employeeList.AutoSize = true;
-            this.employeeList.Dock = System.Windows.Forms.DockStyle.Top;
             this.employeeList.Location = new System.Drawing.Point(0, 0);
             this.employeeList.Name = "employeeList";
             this.employeeList.Size = new System.Drawing.Size(96, 17);
@@ -59,89 +56,14 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.titleDataGridViewTextBoxColumn,
-            this.firstNameDataGridViewTextBoxColumn,
-            this.middleNameDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.jobTitleDataGridViewTextBoxColumn,
-            this.emailAddressDataGridViewTextBoxColumn,
-            this.cityDataGridViewTextBoxColumn,
-            this.stateProvinceNameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.vEmployeeBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 17);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 20);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 433);
+            this.dataGridView1.Size = new System.Drawing.Size(776, 349);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
-            this.titleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            this.titleDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // middleNameDataGridViewTextBoxColumn
-            // 
-            this.middleNameDataGridViewTextBoxColumn.DataPropertyName = "MiddleName";
-            this.middleNameDataGridViewTextBoxColumn.HeaderText = "MiddleName";
-            this.middleNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
-            this.middleNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // jobTitleDataGridViewTextBoxColumn
-            // 
-            this.jobTitleDataGridViewTextBoxColumn.DataPropertyName = "JobTitle";
-            this.jobTitleDataGridViewTextBoxColumn.HeaderText = "JobTitle";
-            this.jobTitleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.jobTitleDataGridViewTextBoxColumn.Name = "jobTitleDataGridViewTextBoxColumn";
-            this.jobTitleDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // emailAddressDataGridViewTextBoxColumn
-            // 
-            this.emailAddressDataGridViewTextBoxColumn.DataPropertyName = "EmailAddress";
-            this.emailAddressDataGridViewTextBoxColumn.HeaderText = "EmailAddress";
-            this.emailAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailAddressDataGridViewTextBoxColumn.Name = "emailAddressDataGridViewTextBoxColumn";
-            this.emailAddressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
-            this.cityDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            this.cityDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // stateProvinceNameDataGridViewTextBoxColumn
-            // 
-            this.stateProvinceNameDataGridViewTextBoxColumn.DataPropertyName = "StateProvinceName";
-            this.stateProvinceNameDataGridViewTextBoxColumn.HeaderText = "StateProvinceName";
-            this.stateProvinceNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.stateProvinceNameDataGridViewTextBoxColumn.Name = "stateProvinceNameDataGridViewTextBoxColumn";
-            this.stateProvinceNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // vEmployeeBindingSource
             // 
@@ -157,11 +79,48 @@
             // 
             this.vEmployeeTableAdapter.ClearBeforeFill = true;
             // 
+            // manageStaffBtn
+            // 
+            this.manageStaffBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.manageStaffBtn.AutoSize = true;
+            this.manageStaffBtn.Location = new System.Drawing.Point(12, 397);
+            this.manageStaffBtn.Name = "manageStaffBtn";
+            this.manageStaffBtn.Size = new System.Drawing.Size(203, 27);
+            this.manageStaffBtn.TabIndex = 2;
+            this.manageStaffBtn.Text = "Manage Staff";
+            this.manageStaffBtn.UseVisualStyleBackColor = true;
+            // 
+            // addStaffBtn
+            // 
+            this.addStaffBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.addStaffBtn.AutoSize = true;
+            this.addStaffBtn.Location = new System.Drawing.Point(283, 397);
+            this.addStaffBtn.Name = "addStaffBtn";
+            this.addStaffBtn.Size = new System.Drawing.Size(235, 27);
+            this.addStaffBtn.TabIndex = 3;
+            this.addStaffBtn.Text = "Add New Staff";
+            this.addStaffBtn.UseVisualStyleBackColor = true;
+            // 
+            // exitedStaffBtn
+            // 
+            this.exitedStaffBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.exitedStaffBtn.AutoSize = true;
+            this.exitedStaffBtn.Location = new System.Drawing.Point(595, 397);
+            this.exitedStaffBtn.Name = "exitedStaffBtn";
+            this.exitedStaffBtn.Size = new System.Drawing.Size(193, 27);
+            this.exitedStaffBtn.TabIndex = 4;
+            this.exitedStaffBtn.Text = "View Exited Staff";
+            this.exitedStaffBtn.UseVisualStyleBackColor = true;
+            // 
             // HRManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.exitedStaffBtn);
+            this.Controls.Add(this.addStaffBtn);
+            this.Controls.Add(this.manageStaffBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.employeeList);
             this.Name = "HRManager";
@@ -182,13 +141,8 @@
         private AdventureWorks2017DataSet adventureWorks2017DataSet;
         private System.Windows.Forms.BindingSource vEmployeeBindingSource;
         private AdventureWorks2017DataSetTableAdapters.vEmployeeTableAdapter vEmployeeTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn middleNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jobTitleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailAddressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stateProvinceNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button manageStaffBtn;
+        private System.Windows.Forms.Button addStaffBtn;
+        private System.Windows.Forms.Button exitedStaffBtn;
     }
 }

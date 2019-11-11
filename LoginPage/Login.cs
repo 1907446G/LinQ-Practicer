@@ -58,8 +58,9 @@ namespace LoginPage
                             var department = (from y in context.vEmployeeDepartments
                                               where username.BusinessEntityID == y.BusinessEntityID
                                               select y.Department);
+                            
                             #region Manager check
-                            if (username.OrganizationLevel <= 2 || username.OrganizationLevel == null)
+                            if ((context.uspGetManagerEmployees(username.BusinessEntityID)).Count() > 1 && (department.First().Contains("Human Resources")))
                             {
                                 MessageBox.Show($"You have a Manager's access priviledge. " +
                                     $"Welcome {username.Person.FirstName} {username.Person.MiddleName} {username.Person.LastName} from {department.First()}",
@@ -69,6 +70,19 @@ namespace LoginPage
                                 hR.ShowDialog();
                                 this.Close();
                             }
+
+                            else if ((context.uspGetManagerEmployees(username.BusinessEntityID)).Count() == 0 && (department.First().Contains("Human Resources")))
+                            {
+                                MessageBox.Show($"Welcome back HR. " +
+                                    $"Welcome {username.Person.FirstName} {username.Person.MiddleName} {username.Person.LastName} from {department.First()}",
+                                    "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Hide();
+                                HRStaff hRStaff = new HRStaff(username);
+                                hRStaff.ShowDialog();
+                                this.Close();
+                                
+                            }
+
                             else
                             {
                                 MessageBox.Show($"Welcome {username.Person.FirstName} {username.Person.MiddleName} {username.Person.LastName} from {department.First()}",
